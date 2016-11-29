@@ -3,16 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+
+	
 </head>
 <body>
 
-		<!-- // In the HTML, have one input field where someone can enter in a temperature. -->
-		<label>Enter Temperature </label><input type="text" name="temperature"></label>
-		
+	<div id="container">
+		<div class="row">
 
-		<!-- // Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to. -->
+			<div class="col-md-8">
 
-		<label>Celcius</label><input type="radio" name="Celcius"><label>Fahrenheit</label><input type="radio" name="Fahrenheit">
+
+						<!-- // In the HTML, have one input field where someone can enter in a temperature. -->
+						<label>Enter Temperature </label><input type="text" name="temperature" id="temptemp"></label>
+						
+
+						<!-- // Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to. -->
+
+						<label>Celcius</label><input type="radio" name="Celcius"><label>Fahrenheit</label><input type="radio" name="Fahrenheit">
+			</div>
+		</div>
    
 
    <!-- // Create a block level element that will hold the text of the converted temperature. -->
@@ -41,7 +51,8 @@
 
 
 
-
+</div>
+	
 	<script type="text/javascript" src="converter.js"></script>
 </body>
 </html>
