@@ -7,8 +7,25 @@
 <body>
 
 		<!-- // In the HTML, have one input field where someone can enter in a temperature. -->
-		<input type="text" name="temperature">
+		<label>Enter Temperature </label><input type="text" name="temperature"></label>
+		
 
+		<!-- // Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to. -->
+
+		<label>Celcius</label><input type="radio" name="Celcius"><label>Fahrenheit</label><input type="radio" name="Fahrenheit">
+   
+
+   <!-- // Create a block level element that will hold the text of the converted temperature. -->
+
+   			<p id="holdingResult">#holdingResult</p>
+
+
+<!-- // Create a button that, when clicked, displays the converted temperature. -->
+
+				<button id="click2Convert">#click2Convert</button>
+
+				<!-- // Create another button that, when clicked, clears any text in the input field. -->
+				<button id="clearText">#clearText</button>
 
 
 
