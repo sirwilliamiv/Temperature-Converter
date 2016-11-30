@@ -53,7 +53,22 @@
 // var radioCelsius =   
 function radioCelsius(inputTemp) {
 	
-	document.getElementById("holdingResult").innerHTML = (inputTemp - 32) * 5/9
+	document.getElementById("holdingResult").innerHTML = (inputTemp - 32) * 5/9 
+
+
+	console.log(typeof document.getElementById("holdingResult").innerHTML)
+	if(document.getElementById("holdingResult").innerHTML > 32) {
+
+		document.getElementById("holdingResult").style.color = "red";
+	}
+
+	else if (document.getElementById("holdingResult").innerHTML <= 0) {
+		document.getElementById("holdingResult").style.color = "blue";
+	}
+
+	else {
+		document.getElementById("holdingResult").style.color = "green";
+	}
 
 }
 
@@ -64,6 +79,21 @@ function radioCelsius(inputTemp) {
 function radioFahrenheit(inputTemp) {
 
 	document.getElementById("holdingResult").innerHTML = (inputTemp * 9/5 + 32)
+
+	console.log(typeof document.getElementById("holdingResult").innerHTML)
+	if(document.getElementById("holdingResult").innerHTML > 90) {
+
+		document.getElementById("holdingResult").style.color = "red";
+	}
+
+	else if (document.getElementById("holdingResult").innerHTML <= 32) {
+		document.getElementById("holdingResult").style.color = "blue";
+	}
+
+	else {
+		document.getElementById("holdingResult").style.color = "green";
+	}
+
 
 }
 	
@@ -80,7 +110,7 @@ document.querySelector('#clearText').addEventListener('click', function() {
 // -------------------------executing with the Enter button----------------------
   document.addEventListener('keypress', function(enter) {
 
-  	console.log(enter)
+  	// console.log(enter)
   	if (enter.keyCode === 13) {
 
 	 
@@ -96,16 +126,26 @@ document.querySelector('#clearText').addEventListener('click', function() {
 	  		}
 
  		}
- 	
- }
+ 	}
 )
+
+
+// -------------------------Color based on Temp----------------------
+// If the temperature is greater than 90F/32C the color of the converted temperature should be red.
+// If the temperature is less than 32F/0C the color of the converted temperature should be blue.
+// For any other temperature, the color should be green.
+
+// red 
+
+
+
 
 
 
 
 
 // Get a reference to the button element in the DOM
-var button = document.getElementById("converter");
+// var button = document.getElementById("converter");
 
 // This function should determine which conversion should
 // // happen based on which radio button is selected.
