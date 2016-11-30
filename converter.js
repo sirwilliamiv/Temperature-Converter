@@ -15,7 +15,7 @@
 
 // / Add an event handler to the input field that checks if the user pressed the enter key, and if that happens, perform the conversion.
 // enterkey+addEventListener("")
-var inputTemp = document.getElementById("temptemp").value
+
 
 
 
@@ -23,16 +23,16 @@ var inputTemp = document.getElementById("temptemp").value
 // 
 // -------------------------Celsius Radio Button and function-----------
 
-document.querySelector('toCelsius').addEventListener('click', function toCelsius (inputTemp) {
-
+document.querySelector('#toCelsius').addEventListener('click', function toCelsius () {
+	var inputTemp = document.getElementById("temptemp").value
 	document.getElementById("holdingResult").innerHTML = (inputTemp - 32) * 5/9
 
 	}
 )
 
 
-document.querySelector('toFahrenheit').addEventListener('click', function toFahrenheit (inputTemp) {
-
+document.querySelector('#toFahrenheit').addEventListener('click', function toFahrenheit () {
+	var inputTemp = document.getElementById("temptemp").value
 	document.getElementById("holdingResult").innerHTML = (inputTemp * 9/5 + 32)
 
 		}
