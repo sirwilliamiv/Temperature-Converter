@@ -33,9 +33,9 @@
 // ----------------------------Button Selection-----------------------------
   document.querySelector('#click2Convert').addEventListener('click', 
 
-  	function (converting) {
+  	function() {
   				var inputTemp = document.getElementById("temptemp").value
-  					console.log(typeof inputTemp)
+  					// console.log(typeof inputTemp)
 
   		if (document.querySelector('#toCelsius').checked === true ) {
   			radioCelsius(inputTemp)
@@ -72,10 +72,34 @@ function radioFahrenheit(inputTemp) {
 
 
 document.querySelector('#clearText').addEventListener('click', function() {
-		console.log(temptemp)
+		// console.log(temptemp)
 	  document.getElementById('temptemp').value = "";
 	}
 )
+
+// -------------------------executing with the Enter button----------------------
+  document.addEventListener('keypress', function(enter) {
+
+  	console.log(enter)
+  	if (enter.keyCode === 13) {
+
+	 
+	  			var inputTemp = document.getElementById("temptemp").value
+	  					// console.log(typeof inputTemp)
+
+	  		if (document.querySelector('#toCelsius').checked === true ) {
+	  			radioCelsius(inputTemp)
+	  		} 
+	  		else {
+	  			radioFahrenheit(inputTemp)
+
+	  		}
+
+ 		}
+ 	
+ }
+)
+
 
 
 
