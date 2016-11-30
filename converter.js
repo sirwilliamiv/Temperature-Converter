@@ -21,22 +21,48 @@
 
 // put a change event on celsius/fahrenheit radio buttons
 // 
+//document.querySelector(buttonthing).addeventleister('look up button fuctnionsmdn', function () {
+//grabs input
+// looks at radio ID
+// if celcuius true run celc
+// else run farenheign
+// }\\\
+// 
+// 
+// if( tocelsius)
+radiuscelcus//
+
+
+// ----------------------------Button Selection-----------------------------
+  document.querySelector('#click2Convert').addEventListener('click', function (converting) {
+  	var inputTemp = document.getElementById("temptemp").value
+  		if (document.querySelector('#toCelsius').checked === true ) {
+  			toCelsius(inputTemp)
+  		} 
+  		else {
+  			toFahrenheit(inputTemp)
+
+  		}
+
+ 	}
+)
+
 // -------------------------Celsius Radio Button and function-----------
 
-document.querySelector('#toCelsius').addEventListener('click', function toCelsius () {
-	var inputTemp = document.getElementById("temptemp").value
+var radioCelsius =  function toCelsius (inputTemp) {
+	
 	document.getElementById("holdingResult").innerHTML = (inputTemp - 32) * 5/9
 
 	}
-)
 
 
-document.querySelector('#toFahrenheit').addEventListener('click', function toFahrenheit () {
-	var inputTemp = document.getElementById("temptemp").value
+
+var radioFahrenheit =function toFahrenheit (inputTemp) {
+
 	document.getElementById("holdingResult").innerHTML = (inputTemp * 9/5 + 32)
 
 		}
-	)
+	
 
 
 
