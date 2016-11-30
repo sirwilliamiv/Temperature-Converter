@@ -19,22 +19,28 @@ var inputTemp = document.getElementById("temptemp").value
 
 
 
+// put a change event on celsius/fahrenheit radio buttons
+// 
+// -------------------------Celsius Radio Button and function-----------
+
+document.querySelector('toCelsius').addEventListener('click', function toCelsius (inputTemp) {
+
+	document.getElementById("holdingResult").innerHTML = (inputTemp - 32) * 5/9
+
+	}
+)
+
+
+document.querySelector('toFahrenheit').addEventListener('click', function toFahrenheit (inputTemp) {
+
+	document.getElementById("holdingResult").innerHTML = (inputTemp * 9/5 + 32)
+
+		}
+	)
 
 
 
 
-
-function toCelsius (amount) {
-
-	document.getElementById("holdingResult").innerHTML = (amount - 32) * 5/9
-
-}
-
-function toFahrenheit (amount) {
-
-	document.getElementById("holdingResult").innerHTML = (amount * 9/5 + 32)
-
-}
 
 // Get a reference to the button element in the DOM
 var button = document.getElementById("converter");
@@ -46,7 +52,7 @@ function determineConverter (clickEvent) {
 }
 
 
-toCelsius(36)
+// toCelsius(36)
 
 // Assign a function to be executed when the button is clicked
 button.addEventListener("click", determineConverter);
