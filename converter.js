@@ -27,43 +27,55 @@
 // if celcuius true run celc
 // else run farenheign
 // }\\\
-// 
-// 
-// if( tocelsius)
-radiuscelcus//
+
 
 
 // ----------------------------Button Selection-----------------------------
-  document.querySelector('#click2Convert').addEventListener('click', function (converting) {
-  	var inputTemp = document.getElementById("temptemp").value
+  document.querySelector('#click2Convert').addEventListener('click', 
+
+  	function (converting) {
+  				var inputTemp = document.getElementById("temptemp").value
+  					console.log(typeof inputTemp)
+
   		if (document.querySelector('#toCelsius').checked === true ) {
-  			toCelsius(inputTemp)
+  			radioCelsius(inputTemp)
   		} 
   		else {
-  			toFahrenheit(inputTemp)
+  			radioFahrenheit(inputTemp)
 
   		}
 
  	}
 )
 
-// -------------------------Celsius Radio Button and function-----------
+// -------------------------Celsius/ Fahrenheit Button and function-----------
 
-var radioCelsius =  function toCelsius (inputTemp) {
+// var radioCelsius =   
+function radioCelsius(inputTemp) {
 	
 	document.getElementById("holdingResult").innerHTML = (inputTemp - 32) * 5/9
 
-	}
+}
 
 
 
-var radioFahrenheit =function toFahrenheit (inputTemp) {
+// var radioFahrenheit =
+// 
+function radioFahrenheit(inputTemp) {
 
 	document.getElementById("holdingResult").innerHTML = (inputTemp * 9/5 + 32)
 
-		}
+}
 	
 
+// ----------------------Clear that value field!!------------------------
+
+
+document.querySelector('#clearText').addEventListener('click', function() {
+		console.log(temptemp)
+	  document.getElementById('temptemp').value = "";
+	}
+)
 
 
 
@@ -72,13 +84,13 @@ var radioFahrenheit =function toFahrenheit (inputTemp) {
 var button = document.getElementById("converter");
 
 // This function should determine which conversion should
-// happen based on which radio button is selected.
-function determineConverter (clickEvent) {
-  console.log("event", clickEvent);
-}
+// // happen based on which radio button is selected.
+// function determineConverter (clickEvent) {
+//   console.log("event", clickEvent);
+// }
 
 
 // toCelsius(36)
 
 // Assign a function to be executed when the button is clicked
-button.addEventListener("click", determineConverter);
+// button.addEventListener("click", determineConverter);
